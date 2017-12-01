@@ -20,9 +20,23 @@ Simulate an Ethernet LAN using "n" nodes, change error rate and data rate and co
 <br/>
 
 <h2> Step 2: </h2>
-<b> Run gawk </b>
+<b> Run GAWK </b> <br/>
 1. Open terminal.<br/>
 2. Go to the folder with AWK file and trace file "out.tr".<br/>
 3. run gawk -f Lan1.awk out.tr<br/>
 4. It will give you output on the terminal itself. <br/>
  
+<h2> Step 3: </h2> 
+<b> Prepare .XG file </b> <br/>
+1. Follow the instruction in step 1 and step 2 again for new error rate or data rate. <br/>
+2. Change error rate on the line where set error-rate is given and set it 0.1, 0.2 , ... n. <br/>
+3. Change data rate by changing the BW for duplex link between node 3 and 4. <br/>
+4. make a seperate .xg file with this format "errorrate throughput" for every changed errorrate. <br/>
+
+<h2> Step 4: </h2>
+<b> Use XGRAPH to create graph </b> <br/>
+1. Open terminal in directory where .xg file is saved.
+2. run xgraph filename.xg and you'll get the desired output.
+
+<hr/>
+<h1> Thank You. I hope this helps you. </h1>
